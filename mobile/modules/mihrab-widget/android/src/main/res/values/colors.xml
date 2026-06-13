@@ -1,0 +1,7 @@
+<resources>
+  <color name="mihrab_widget_background">#123E36</color>
+  <color name="mihrab_widget_panel">#1A594B</color>
+  <color name="mihrab_widget_gold">#F1CF82</color>
+  <color name="mihrab_widget_text">#FFFFFF</color>
+  <color name="mihrab_widget_muted">#BBD0C8</color>
+</resources>

@@ -1,0 +1,8 @@
+node-v*-win-x64/
+node-v*-win-x64.zip
+.tools/
+mobile/.expo-local/
+mobile/.npm-cache/
+mobile/.expo-server*.log
+mobile/preview*.png
+mobile/expo-web*.log
