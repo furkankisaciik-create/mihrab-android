@@ -12,6 +12,8 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { type Href, useRouter } from 'expo-router';
 
+import { getInitials, loadUserProfile } from '@/services/user-profile';
+
 import { DailyHadithPreview } from '@/components/daily-hadith-preview';
 import { DailyVersePreview } from '@/components/daily-verse-preview';
 import { DhikrPreview } from '@/components/dhikr-preview';
@@ -89,6 +91,8 @@ export default function HomeScreen() {
   const router = useRouter();
   const [now, setNow] = useState(new Date());
   const [selectorVisible, setSelectorVisible] = useState(false);
+  const [profileInitials, setProfileInitials] = useState('?');
+  const [profileColor, setProfileColor] = useState('#1A594B');
   const {
     snapshot,
     loading,
@@ -107,6 +111,13 @@ export default function HomeScreen() {
   useEffect(() => {
     const timer = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    loadUserProfile().then((p) => {
+      setProfileInitials(getInitials(p.name));
+      setProfileColor(p.avatarColor);
+    });
   }, []);
 
   const locationLabel = formatLocation(
@@ -130,6 +141,13 @@ export default function HomeScreen() {
         <View style={styles.hero}>
           <SafeAreaView edges={['top']} style={styles.safeArea}>
             <View style={styles.header}>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel="Profil"
+                onPress={() => router.push('/profile' as Href)}
+                style={[styles.profileButton, { backgroundColor: profileColor }]}>
+                <Text style={styles.profileButtonText}>{profileInitials}</Text>
+              </Pressable>
               <View style={styles.locationCopy}>
                 <Text style={styles.eyebrow}>DİYANET NAMAZ VAKİTLERİ</Text>
                 <Text numberOfLines={1} style={styles.location}>
@@ -362,12 +380,82 @@ export default function HomeScreen() {
                 <Text style={styles.actionIconText}>W</Text>
               </View>
               <View style={styles.actionCopy}>
-                <Text style={styles.actionTitle}>Ana ekran widget&apos;Ä±</Text>
+                <Text style={styles.actionTitle}>Ana ekran widget'ı</Text>
                 <Text style={styles.actionSubtitle}>
-                  SÄ±radaki vakti telefon ana ekranÄ±nda gÃ¶ster
+                  Sıradaki vakti telefon ana ekranında göster
                 </Text>
               </View>
-              <Text style={styles.chevron}>â€º</Text>
+              <Text style={styles.chevron}>›</Text>
+            </Pressable>
+
+            <Pressable
+              accessibilityRole="button"
+              onPress={() => router.push('/premium' as Href)}
+              style={styles.actionCard}>
+              <View style={styles.actionIcon}>
+                <Text style={styles.actionIconText}>★</Text>
+              </View>
+              <View style={styles.actionCopy}>
+                <Text style={styles.actionTitle}>MIHRAB Premium</Text>
+                <Text style={styles.actionSubtitle}>Yapay zeka, aile takibi ve gelişmiş özellikler</Text>
+              </View>
+              <Text style={styles.chevron}>›</Text>
+            </Pressable>
+
+            <Pressable
+              accessibilityRole="button"
+              onPress={() => router.push('/ai' as Href)}
+              style={styles.actionCard}>
+              <View style={styles.actionIcon}>
+                <Text style={styles.actionIconText}>✦</Text>
+              </View>
+              <View style={styles.actionCopy}>
+                <Text style={styles.actionTitle}>MIHRAB AI</Text>
+                <Text style={styles.actionSubtitle}>İslami sorularınızı yapay zekaya sorun</Text>
+              </View>
+              <Text style={styles.chevron}>›</Text>
+            </Pressable>
+
+            <Pressable
+              accessibilityRole="button"
+              onPress={() => router.push('/stats' as Href)}
+              style={styles.actionCard}>
+              <View style={styles.actionIcon}>
+                <Text style={styles.actionIconText}>◎</Text>
+              </View>
+              <View style={styles.actionCopy}>
+                <Text style={styles.actionTitle}>Gelişmiş İstatistikler</Text>
+                <Text style={styles.actionSubtitle}>Seri, ısı haritası ve namaz dağılımı</Text>
+              </View>
+              <Text style={styles.chevron}>›</Text>
+            </Pressable>
+
+            <Pressable
+              accessibilityRole="button"
+              onPress={() => router.push('/family' as Href)}
+              style={styles.actionCard}>
+              <View style={styles.actionIcon}>
+                <Text style={styles.actionIconText}>⌂</Text>
+              </View>
+              <View style={styles.actionCopy}>
+                <Text style={styles.actionTitle}>Aile Grubu</Text>
+                <Text style={styles.actionSubtitle}>Aile üyeleriyle namaz takibi yapın</Text>
+              </View>
+              <Text style={styles.chevron}>›</Text>
+            </Pressable>
+
+            <Pressable
+              accessibilityRole="button"
+              onPress={() => router.push('/language' as Href)}
+              style={styles.actionCard}>
+              <View style={styles.actionIcon}>
+                <Text style={styles.actionIconText}>L</Text>
+              </View>
+              <View style={styles.actionCopy}>
+                <Text style={styles.actionTitle}>Uygulama dili</Text>
+                <Text style={styles.actionSubtitle}>Türkçe, İngilizce veya Arapça seçin</Text>
+              </View>
+              <Text style={styles.chevron}>›</Text>
             </Pressable>
 
             <Pressable
@@ -442,6 +530,19 @@ const styles = StyleSheet.create({
     fontSize: 21,
     fontWeight: '700',
     marginTop: 3,
+  },
+  profileButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 10,
+  },
+  profileButtonText: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    fontWeight: '900',
   },
   locationButton: {
     width: 44,

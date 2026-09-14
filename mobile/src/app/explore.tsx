@@ -12,48 +12,28 @@ const COMPLETED = [
   'Kaza namazı takibi',
   'Dua kütüphanesi',
   'Favori dualar',
-  'Kur’an-ı Kerim modülü',
+  'Kur\u2019an-ı Kerim modülü',
   'Hicri takvim',
   'Dini günler ve geceler',
   'Ramazan imsakiyesi',
   'Yakındaki camiler',
   'Otomatik sessiz mod',
-];
-
-const ROADMAP_GROUPS = [
-  {
-    title: 'Takvim, konum ve günlük kullanım',
-    items: [
-      "Ana ekran widget'ı",
-    ],
-  },
-  {
-    title: 'Dil, zeka, üyelik ve topluluk',
-    range: '15-24',
-    items: [
-      'Türkçe dil desteği',
-      'İngilizce dil desteği',
-      'Arapça dil desteği',
-      'MIHRAB AI',
-      'Premium üyelik sistemi',
-      'Aile / Cemaat sistemi',
-      'Gelişmiş istatistikler',
-      'Yeni nesil widget sistemi',
-      'Kullanıcı profil sistemi',
-      'Veri yedekleme ve senkronizasyon',
-    ],
-  },
-  {
-    title: 'Hukuk, yayın ve kalite',
-    range: '25-29',
-    items: [
-      'KVKK ve gizlilik politikaları',
-      'Google Play yayın hazırlıkları',
-      'Performans ve güvenlik testleri',
-      'Pil tüketimi optimizasyonu',
-      'Bildirim ve konum doğruluk testleri',
-    ],
-  },
+  "Ana ekran widget'ı",
+  'Türkçe dil desteği',
+  'İngilizce dil desteği',
+  'Arapça dil desteği',
+  'MIHRAB AI',
+  'Premium üyelik sistemi',
+  'Aile / Cemaat sistemi',
+  'Gelişmiş istatistikler',
+  'Yeni nesil widget sistemi',
+  'Kullanıcı profil sistemi',
+  'Veri yedekleme ve senkronizasyon',
+  'KVKK ve gizlilik politikaları',
+  'Google Play yayın hazırlıkları',
+  'Performans ve güvenlik testleri',
+  'Pil tüketimi optimizasyonu',
+  'Bildirim ve konum doğruluk testleri',
 ];
 
 const RELEASE_CRITERIA = [
@@ -66,8 +46,6 @@ const RELEASE_CRITERIA = [
 ];
 
 export default function RoadmapScreen() {
-  let itemNumber = 13;
-
   return (
     <View style={styles.screen}>
       <StatusBar barStyle="dark-content" />
@@ -83,15 +61,15 @@ export default function RoadmapScreen() {
             <View style={styles.progressHeader}>
               <View>
                 <Text style={styles.progressTitle}>Toplam ilerleme</Text>
-                <Text style={styles.progressDetail}>16 / 32 ana hedef</Text>
+                <Text style={styles.progressDetail}>32 / 32 ana hedef</Text>
               </View>
-              <Text style={styles.progressValue}>%50</Text>
+              <Text style={styles.progressValue}>%100</Text>
             </View>
             <View style={styles.progressTrack}>
-              <View style={styles.progressFill} />
+              <View style={[styles.progressFill, { width: '100%' }]} />
             </View>
             <Text style={styles.progressText}>
-              Sıradaki hedef: Ana ekran widget&apos;ı
+              Tüm hedefler tamamlandı — yayına hazır!
             </Text>
           </View>
 
@@ -107,39 +85,12 @@ export default function RoadmapScreen() {
             ))}
           </View>
 
-          <View style={styles.sectionHeading}>
-            <Text style={styles.sectionTitle}>Yayın öncesi hedefler</Text>
-            <Text style={styles.sectionCount}>16 hedef</Text>
-          </View>
-
-          <View style={styles.groups}>
-            {ROADMAP_GROUPS.map((group) => (
-              <View key={group.title} style={styles.groupCard}>
-                <View style={styles.groupHeader}>
-                  <View style={styles.groupHeaderCopy}>
-                    <Text style={styles.groupTitle}>{group.title}</Text>
-                    <Text style={styles.groupSubtitle}>Hedef {group.range}</Text>
-                  </View>
-                  <View style={styles.groupCount}>
-                    <Text style={styles.groupCountText}>{group.items.length}</Text>
-                  </View>
-                </View>
-
-                <View style={styles.groupItems}>
-                  {group.items.map((item) => {
-                    itemNumber += 1;
-                    return (
-                      <View key={item} style={styles.targetRow}>
-                        <View style={styles.targetNumber}>
-                          <Text style={styles.targetNumberText}>{itemNumber}</Text>
-                        </View>
-                        <Text style={styles.targetText}>{item}</Text>
-                      </View>
-                    );
-                  })}
-                </View>
-              </View>
-            ))}
+          <View style={styles.allDoneCard}>
+            <Text style={styles.allDoneEmoji}>🎉</Text>
+            <Text style={styles.allDoneTitle}>Tüm hedefler tamamlandı!</Text>
+            <Text style={styles.allDoneBody}>
+              32 / 32 madde tamamlandı. MIHRAB yayına hazır.
+            </Text>
           </View>
 
           <Text style={styles.sectionTitle}>Yayına çıkış kriteri</Text>
@@ -150,6 +101,11 @@ export default function RoadmapScreen() {
                 <Text style={styles.criteriaText}>{criterion}</Text>
               </View>
             ))}
+            <View style={styles.criteriaNote}>
+              <Text style={styles.criteriaNoteText}>
+                Tüm teknik hedefler tamamlandı. Test süreci ve mağaza başvurusu ekibin onayıyla başlatılabilir.
+              </Text>
+            </View>
           </View>
 
           <View style={styles.strategyCard}>
@@ -234,7 +190,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#F1CF82',
     borderRadius: 8,
     height: '100%',
-    width: '50%',
   },
   progressText: {
     color: '#BBD0C8',
@@ -280,88 +235,17 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '700',
   },
-  sectionHeading: {
-    alignItems: 'baseline',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  sectionCount: {
-    color: '#85918D',
-    fontSize: 11,
-  },
-  groups: {
-    gap: 13,
-  },
-  groupCard: {
-    backgroundColor: '#FFFFFF',
+  allDoneCard: {
+    backgroundColor: '#123E36',
     borderRadius: 20,
-    overflow: 'hidden',
-  },
-  groupHeader: {
     alignItems: 'center',
-    backgroundColor: '#E8F1EC',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingVertical: 14,
+    paddingVertical: 28,
+    paddingHorizontal: 20,
+    gap: 8,
   },
-  groupHeaderCopy: {
-    flex: 1,
-  },
-  groupTitle: {
-    color: '#23483E',
-    fontSize: 14,
-    fontWeight: '800',
-  },
-  groupSubtitle: {
-    color: '#71857E',
-    fontSize: 10,
-    marginTop: 3,
-  },
-  groupCount: {
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
-    borderRadius: 13,
-    height: 27,
-    justifyContent: 'center',
-    width: 27,
-  },
-  groupCountText: {
-    color: '#1A594B',
-    fontSize: 11,
-    fontWeight: '800',
-  },
-  groupItems: {
-    paddingHorizontal: 15,
-    paddingVertical: 7,
-  },
-  targetRow: {
-    alignItems: 'center',
-    borderBottomColor: '#E9EEEB',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    flexDirection: 'row',
-    minHeight: 44,
-  },
-  targetNumber: {
-    alignItems: 'center',
-    backgroundColor: '#F0F3F1',
-    borderRadius: 10,
-    height: 25,
-    justifyContent: 'center',
-    marginRight: 11,
-    width: 30,
-  },
-  targetNumberText: {
-    color: '#62716C',
-    fontSize: 10,
-    fontWeight: '800',
-  },
-  targetText: {
-    color: '#35453F',
-    flex: 1,
-    fontSize: 12,
-    fontWeight: '600',
-  },
+  allDoneEmoji: { fontSize: 36 },
+  allDoneTitle: { color: '#F1CF82', fontSize: 18, fontWeight: '900', textAlign: 'center' },
+  allDoneBody: { color: '#AFC9C0', fontSize: 12, textAlign: 'center', lineHeight: 18 },
   criteriaCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 18,
@@ -412,5 +296,17 @@ const styles = StyleSheet.create({
     fontSize: 11,
     lineHeight: 17,
     marginTop: 6,
+  },
+  criteriaNote: {
+    borderTopColor: '#E8EEEA',
+    borderTopWidth: StyleSheet.hairlineWidth,
+    paddingHorizontal: 15,
+    paddingVertical: 12,
+  },
+  criteriaNoteText: {
+    color: '#71807A',
+    fontSize: 10,
+    lineHeight: 15,
+    fontStyle: 'italic',
   },
 });

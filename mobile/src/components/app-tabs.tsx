@@ -68,6 +68,16 @@ export default function AppTabs() {
       <Tabs.Screen name="silent-mode" options={{ href: null }} />
       <Tabs.Screen name="home-widget" options={{ href: null }} />
       <Tabs.Screen name="explore" options={{ href: null }} />
+      <Tabs.Screen name="language" options={{ href: null }} />
+      <Tabs.Screen name="ai" options={{ href: null }} />
+      <Tabs.Screen name="premium" options={{ href: null }} />
+      <Tabs.Screen name="family" options={{ href: null }} />
+      <Tabs.Screen name="stats" options={{ href: null }} />
+      <Tabs.Screen name="profile" options={{ href: null }} />
+      <Tabs.Screen name="backup" options={{ href: null }} />
+      <Tabs.Screen name="privacy" options={{ href: null }} />
+      <Tabs.Screen name="release" options={{ href: null }} />
+      <Tabs.Screen name="quality" options={{ href: null }} />
     </Tabs>
   );
 }

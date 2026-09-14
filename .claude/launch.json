@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mihrab-expo",
+      "runtimeExecutable": "C:\\Windows\\System32\\cmd.exe",
+      "runtimeArgs": ["/c", "C:\\Users\\ezgic\\OneDrive\\Документы\\Namaz Uygulaması\\start-expo.cmd"],
+      "port": 8081
+    }
+  ]
+}

@@ -6,3 +6,4 @@ mobile/.npm-cache/
 mobile/.expo-server*.log
 mobile/preview*.png
 mobile/expo-web*.log
+.codex-remote-attachments.zip

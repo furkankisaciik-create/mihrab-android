@@ -1,0 +1,496 @@
+{
+  "common": {
+    "prayers": {
+      "imsak": "Fajr",
+      "gunes": "Sunrise",
+      "ogle": "Dhuhr",
+      "ikindi": "Asr",
+      "aksam": "Maghrib",
+      "yatsi": "Isha",
+      "sabah": "Fajr",
+      "oglen": "Dhuhr",
+      "sabah_kisa": "Fajr",
+      "oglen_kisa": "Dhuhr"
+    },
+    "retry": "Try again",
+    "openSettings": "Open settings",
+    "loading": "Loading",
+    "error": "Error",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "next": "NEXT",
+    "today": "Today",
+    "diyanet": "Diyanet",
+    "savedDiyanet": "Saved Diyanet",
+    "dataNotice": "Data is stored on this device only. No account or internet connection required.",
+    "localDataNotice": "Records are stored on this device only. No account or internet connection required."
+  },
+  "home": {
+    "eyebrow": "DIYANET PRAYER TIMES",
+    "locating": "Locating",
+    "nextPrayer": {
+      "label": "Next prayer",
+      "waiting": "Waiting for prayer times"
+    },
+    "loading": "Fetching location and times",
+    "todayTimes": "Today's times",
+    "turkeyAutoLocation": "Auto location for Turkey",
+    "diyanetSource": "Diyanet source",
+    "error": {
+      "title": "Could not load times",
+      "retry": "Try again",
+      "manual": "Select manually"
+    },
+    "actions": {
+      "refreshLocation": "Refresh location",
+      "refreshLocationSub": "Detect city and district from phone location",
+      "selectCity": "Select city or district",
+      "selectCitySub": "Browse Diyanet regions in Turkey",
+      "qibla": "Qibla compass",
+      "qiblaSub": "Find the direction of the Kaaba with live sensors",
+      "notifications": "Prayer notifications",
+      "notificationsSub": "Set separate reminders and sound for each prayer",
+      "mosques": "Nearby mosques",
+      "mosquesSub": "See mosques, distance and directions on map",
+      "silentMode": "Auto silent mode",
+      "silentModeSub": "Schedule silent times based on prayer times",
+      "widget": "Home screen widget",
+      "widgetSub": "Show next prayer time on your home screen",
+      "roadmap": "Roadmap",
+      "roadmapSub": "See where we are on MIHRAB goals"
+    },
+    "notice": {
+      "cached": "Saved Diyanet",
+      "live": "Diyanet"
+    },
+    "dataNotice": "Times are fetched from the official Diyanet İşleri Başkanlığı prayer times page. The last successful data is stored on this device for offline use."
+  },
+  "notifications": {
+    "eyebrow": "MIHRAB REMINDERS",
+    "title": "Prayer notifications",
+    "subtitle": "Configure each prayer, its reminder times, and sound behavior independently.",
+    "master": {
+      "title": "Use notifications",
+      "granted": "Phone notification permission is enabled",
+      "denied": "Notification permission is disabled in phone settings",
+      "unsupported": "Notifications work on Android and iOS devices",
+      "pending": "Notification permission has not been requested yet"
+    },
+    "schedule": {
+      "count": "notifications scheduled",
+      "waiting": "Waiting for new Diyanet times",
+      "until": "Scheduled until {{time}}"
+    },
+    "openSettings": "Open phone settings",
+    "info": {
+      "title": "Initial setup",
+      "text": "All four reminders are selected, all silent. Use the options below to make a prayer loud or remove reminders you don't want."
+    },
+    "section": {
+      "title": "Prayers",
+      "hint": "Each one is independent"
+    },
+    "prayer": {
+      "on": "Reminders on",
+      "off": "This prayer is off",
+      "format": "Notification format",
+      "silent": "Silent",
+      "sound": "Sound",
+      "reminderTimes": "Reminder times",
+      "emptyReminder": "Select at least one reminder time."
+    },
+    "reminder": {
+      "1h": "1 hour before",
+      "now": "At prayer time",
+      "minutes": "{{min}} min before"
+    },
+    "footer": "MIHRAB schedules at most 60 local notifications ahead. When Diyanet times or location are refreshed, the old schedule is cleared and rebuilt with updated times."
+  },
+  "qibla": {
+    "eyebrow": "LIVE QIBLA COMPASS",
+    "title": "Direction of the Kaaba",
+    "subtitle": "Hold the phone flat and level with the ground",
+    "loading": "Preparing location and compass",
+    "labels": {
+      "bearing": "Qibla bearing",
+      "direction": "Compass direction",
+      "distance": "Kaaba distance"
+    },
+    "accuracy": {
+      "section": "Accuracy status",
+      "live": "LIVE",
+      "compass": "Compass accuracy",
+      "phoneMeasures": "Measured on phone",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "calibrate": "Needs calibration"
+    },
+    "details": {
+      "northRef": "North reference",
+      "trueNorth": "True north",
+      "magneticNorth": "Magnetic north",
+      "locationAccuracy": "Location accuracy",
+      "approxMeters": "approx ±{{m}} m",
+      "calculation": "Calculation",
+      "greatCircle": "Great circle bearing",
+      "onPhone": "Determined on phone"
+    },
+    "guidance": {
+      "aligned": "You are facing the Qibla",
+      "calibratePhone": "Calibrate by drawing a figure-eight in the air",
+      "webPreview": "Live compass works on Android or iOS devices",
+      "preparing": "Preparing Qibla direction",
+      "turnRight": "Turn right {{amount}}°",
+      "turnLeft": "Turn left {{amount}}°"
+    },
+    "calibration": {
+      "title": "Calibrate the compass",
+      "text": "Move the phone away from metal objects and draw a figure-eight in the air a few times."
+    },
+    "tip": {
+      "title": "For best accuracy",
+      "text": "Magnetic covers, car interiors, speakers, metal tables and electronic devices can affect the compass. Measure in an open area with the phone held horizontally."
+    },
+    "refresh": "Refresh location and compass",
+    "error": {
+      "title": "Could not start compass",
+      "retry": "Try again",
+      "openSettings": "Open settings"
+    }
+  },
+  "tracker": {
+    "eyebrow": "MIHRAB · DAILY WORSHIP",
+    "title": "Prayer tracker",
+    "loading": "Preparing prayer tracker",
+    "qadaShortcut": "Go to missed prayer tracker",
+    "allCompleted": "Today's prayers completed",
+    "remaining": "{{count}} prayers remaining",
+    "trackHint": "Mark each prayer after performing it to track your daily routine.",
+    "completedDay": {
+      "title": "Alhamdulillah, today is complete",
+      "text": "You have logged all five daily prayers."
+    },
+    "section": {
+      "eyebrow": "TODAY",
+      "title": "Five daily prayers",
+      "diyanetTimes": "Diyanet times",
+      "waitingTimes": "Waiting for times"
+    },
+    "prayerStatus": {
+      "completed": "Prayed",
+      "current": "Time has come",
+      "passed": "Time has passed",
+      "upcoming": "Upcoming",
+      "unknown": "Waiting for time"
+    },
+    "stats": {
+      "title": "Last 7 days",
+      "lastSeven": "In the last 7 days",
+      "outOf35": "out of 35 prayers",
+      "fullDays": "Full days",
+      "thisWeek": "This week",
+      "streak": "Daily streak",
+      "fullDayStreak": "Full day"
+    },
+    "info": {
+      "title": "How to use?",
+      "text": "Tap the row of the prayer you performed. If you marked it incorrectly, tap again to undo. This section is for daily on-time tracking; use the separate tracking screen above for missed prayers."
+    },
+    "dataNotice": "Prayer records are stored on this device only. No account or internet connection required."
+  },
+  "qada": {
+    "eyebrow": "MIHRAB · MISSED PRAYERS",
+    "title": "Missed prayers",
+    "loading": "Preparing missed prayer tracker",
+    "trackerShortcut": "Go to daily prayer tracker",
+    "section": {
+      "title": "Missed prayer debt"
+    },
+    "info": {
+      "title": "How does missed prayer tracking work?",
+      "text": "You can enter a debt for each prayer you have missed. Decrease it as you make them up. The debt cannot go below zero."
+    },
+    "add": "Add debt",
+    "subtract": "I prayed it",
+    "noDebt": "You have no missed prayer debt",
+    "dataNotice": "Missed prayer records are stored on this device only."
+  },
+  "dhikr": {
+    "eyebrow": "MIHRAB · WORSHIP TOOLS",
+    "title": "Dhikr counter",
+    "loading": "Preparing dhikr counter",
+    "selectLabel": "SELECT DHIKR",
+    "targetLabel": "TARGET",
+    "targetHint": "This session resets when the target changes",
+    "custom": "Custom",
+    "tapAndCount": "TAP AND COUNT",
+    "targetOf": "Target {{target}}",
+    "sessionProgress": "Session progress",
+    "completed": {
+      "title": "Target completed",
+      "text": "You can continue or start a new round."
+    },
+    "undo": "Undo",
+    "reset": "Reset",
+    "haptics": {
+      "title": "Touch vibration",
+      "text": "Subtle feedback on each count, distinct feedback when the target is reached."
+    },
+    "stats": {
+      "title": "Statistics",
+      "today": "Today",
+      "last7": "Last 7 days",
+      "activeDays": "Active days",
+      "dailyTotal": "Today's total",
+      "completedRounds": "Completed rounds",
+      "breakdown": "Today's breakdown"
+    },
+    "customTarget": {
+      "title": "Custom target",
+      "text": "Set a target between 1 and 9999.",
+      "apply": "Apply target",
+      "cancel": "Cancel"
+    },
+    "resetModal": {
+      "title": "Reset session?",
+      "text": "The {{name}} counter will be reset. Your daily total will be preserved.",
+      "cancel": "Cancel",
+      "confirm": "Reset"
+    },
+    "dataNotice": "Counter and statistics are stored on this device only. No account or internet connection required."
+  },
+  "duas": {
+    "eyebrow": "MIHRAB · DUA LIBRARY",
+    "title": "Duas",
+    "loading": "Preparing dua library",
+    "favorites": "Favorites",
+    "all": "All duas",
+    "categories": "Categories",
+    "noFavorites": "No favorite duas yet",
+    "noFavoritesHint": "Tap the star icon to add a dua to your favorites.",
+    "search": "Search duas...",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites"
+  },
+  "quran": {
+    "eyebrow": "MIHRAB · THE HOLY QURAN",
+    "title": "The Holy Quran",
+    "loading": "Preparing Quran",
+    "surah": "Surah",
+    "verse": "Verse",
+    "juz": "Juz",
+    "lastRead": "Where I left off",
+    "continue": "Continue",
+    "startReading": "Start reading",
+    "search": "Search surahs...",
+    "progress": "Progress"
+  },
+  "calendar": {
+    "eyebrow": "MIHRAB · CALENDAR",
+    "title": "Hijri calendar",
+    "loading": "Preparing calendar",
+    "gregorian": "Gregorian",
+    "hijri": "Hijri",
+    "today": "Today"
+  },
+  "holyDays": {
+    "eyebrow": "MIHRAB · HOLY DAYS",
+    "title": "Holy days and nights",
+    "loading": "Preparing holy days",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "noUpcoming": "No upcoming holy days"
+  },
+  "ramadan": {
+    "eyebrow": "MIHRAB · RAMADAN",
+    "title": "Ramadan prayer schedule",
+    "loading": "Preparing schedule",
+    "imsak": "Suhoor",
+    "iftar": "Iftar",
+    "todayImsak": "Today's suhoor",
+    "todayIftar": "Today's iftar",
+    "daysRemaining": "{{count}} days remaining",
+    "ramadanEnded": "Ramadan has ended",
+    "ramadanNotStarted": "Ramadan has not started yet"
+  },
+  "mosques": {
+    "eyebrow": "MIHRAB · MOSQUES",
+    "title": "Nearby mosques",
+    "loading": "Loading mosques",
+    "distance": "{{distance}} km",
+    "getDirections": "Get directions",
+    "noMosques": "No mosques found nearby",
+    "locationRequired": "Location permission required",
+    "refresh": "Refresh",
+    "map": "Map",
+    "list": "List"
+  },
+  "silentMode": {
+    "eyebrow": "MIHRAB · AUTO SILENT",
+    "title": "Auto silent mode",
+    "loading": "Preparing silent mode",
+    "enable": "Enable silent mode",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "schedule": "Schedule",
+    "prayerWindows": "Prayer times",
+    "info": {
+      "title": "How does it work?",
+      "text": "The phone automatically goes silent as prayer times approach and returns to normal after the time passes."
+    }
+  },
+  "homeWidget": {
+    "eyebrow": "MIHRAB · HOME SCREEN",
+    "title": "Home screen widget",
+    "loading": "Preparing widget",
+    "setup": "Set up widget",
+    "nextPrayer": "Next prayer",
+    "info": {
+      "title": "How to add?",
+      "text": "Long press on an empty area of the home screen, tap Widgets, and search for MIHRAB."
+    }
+  },
+  "verse": {
+    "eyebrow": "MIHRAB · DAILY VERSE",
+    "title": "Daily verse",
+    "loading": "Loading verse",
+    "surah": "Surah",
+    "verse": "Verse",
+    "arabic": "Arabic text",
+    "meaning": "Translation",
+    "share": "Share"
+  },
+  "hadith": {
+    "eyebrow": "MIHRAB · DAILY HADITH",
+    "title": "Daily hadith",
+    "loading": "Loading hadith",
+    "source": "Source",
+    "arabic": "Arabic text",
+    "meaning": "Meaning",
+    "share": "Share"
+  },
+  "language": {
+    "eyebrow": "MIHRAB SETTINGS",
+    "title": "App language",
+    "subtitle": "Select your preferred language. The change takes effect immediately.",
+    "languages": {
+      "tr": "Türkçe",
+      "en": "English",
+      "ar": "العربية"
+    },
+    "selected": "Selected",
+    "note": "Changing the language may require restarting the app."
+  },
+  "premium": {
+    "badge": "MIHRAB PREMIUM",
+    "heroTitle": "A deeper worship experience",
+    "heroSubtitle": "Strengthen your prayer routine with AI, family tracking, and advanced features.",
+    "featuresTitle": "PREMIUM FEATURES",
+    "features": {
+      "ai_unlimited": {
+        "title": "Unlimited MIHRAB AI",
+        "desc": "Ask unlimited Islamic questions and receive personalized guidance."
+      },
+      "advanced_stats": {
+        "title": "Advanced statistics",
+        "desc": "Weekly, monthly and yearly prayer and dhikr analytics."
+      },
+      "family": {
+        "title": "Family / Community system",
+        "desc": "Track prayers together with loved ones and encourage each other."
+      },
+      "cloud_sync": {
+        "title": "Cloud backup & sync",
+        "desc": "Store all your data securely in the cloud and transfer between devices."
+      },
+      "themes": {
+        "title": "Custom themes",
+        "desc": "Personalize the app with dark mode, light mode, and custom color palettes."
+      },
+      "custom_adhan": {
+        "title": "Custom adhan sound",
+        "desc": "Choose your favorite muezzin's voice, set separately for each prayer."
+      }
+    },
+    "choosePlan": "CHOOSE A PLAN",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "perMonth": "/ month",
+    "perYear": "/ year",
+    "subscribe": "Subscribe now",
+    "restore": "Restore purchases",
+    "legal": "Subscription auto-renews. Cancel anytime via Google Play or App Store. Charged 24 hours before renewal date.",
+    "activeTitle": "MIHRAB Premium is active",
+    "activeDesc": "You have access to all premium features. Enjoy your worship.",
+    "back": "Back to home",
+    "successTitle": "Welcome!",
+    "successDesc": "Your MIHRAB Premium membership is active. All premium features are now unlocked.",
+    "successBtn": "Great, let's go"
+  },
+  "stats": {
+    "title": "Advanced Statistics",
+    "currentStreak": "Current streak",
+    "bestStreak": "Best streak",
+    "thisMonth": "This month",
+    "totalPrayers": "Total prayers",
+    "days": "days",
+    "last7days": "LAST 7 DAYS",
+    "last30days": "LAST 30 DAYS",
+    "perPrayer": "PER PRAYER",
+    "last30note": "Based on the last 30 days"
+  },
+  "family": {
+    "title": "Family Group",
+    "admin": "ADMIN",
+    "todayCount": "Today {{count}}/5 prayers",
+    "weeklyCount": "This week {{count}}",
+    "todayProgress": "Today's family prayers",
+    "memberCount": "{{count}} members",
+    "members": "FAMILY MEMBERS",
+    "setupTitle": "Create your family group",
+    "setupSubtitle": "Track prayers together with your family members.",
+    "familyName": "Family name",
+    "familyNamePlaceholder": "e.g. The Johnson Family",
+    "yourName": "Your name",
+    "yourNamePlaceholder": "Enter your name",
+    "create": "Create group",
+    "addMemberTitle": "Add member",
+    "memberName": "Member name",
+    "memberNamePlaceholder": "Enter name",
+    "addMember": "Add",
+    "removeTitle": "Remove member",
+    "removeConfirm": "Are you sure you want to remove this member?",
+    "remove": "Remove",
+    "tipLabel": "INFO",
+    "tipText": "Tap on each prayer dot to mark it as done. Data is stored on this device."
+  },
+  "ai": {
+    "eyebrow": "MIHRAB ARTIFICIAL INTELLIGENCE",
+    "title": "MIHRAB AI",
+    "greeting": "Hello! I'm MIHRAB AI. I'm here for prayer times, worship guidance, and your religious questions. How can I help you?",
+    "suggestedQuestions": "SUGGESTED QUESTIONS",
+    "placeholder": "Ask a question...",
+    "disclaimer": "MIHRAB AI provides Islamic information; consult a qualified scholar for personal fatwas."
+  },
+  "explore": {
+    "eyebrow": "MIHRAB FINAL PLAN",
+    "title": "Pre-launch roadmap",
+    "subtitle": "All goals and test criteria on this list will be completed before general release.",
+    "progress": {
+      "title": "Overall progress",
+      "detail": "17 / 32 main goals",
+      "value": "53%",
+      "next": "Next goal: Multi-language support (TR / EN / AR)"
+    },
+    "completed": "Completed",
+    "upcoming": "Pre-launch goals",
+    "criteria": "Launch criteria",
+    "strategy": {
+      "label": "POST-LAUNCH",
+      "title": "No new core features will be added",
+      "text": "The focus will be on improving existing systems, increasing performance, adding new content, and enhancing user experience."
+    }
+  }
+}

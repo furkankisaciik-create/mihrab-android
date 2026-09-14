@@ -1,0 +1,68 @@
+name: MIHRAB — Android APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      # ── Kaynak kod ──────────────────────────────────────────────────────────
+      - name: Kodu indir
+        uses: actions/checkout@v4
+
+      # ── Node.js ─────────────────────────────────────────────────────────────
+      - name: Node.js 20 kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: mobile/package-lock.json
+
+      # ── Java 17 (Gradle için) ────────────────────────────────────────────────
+      - name: Java 17 kur
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # ── Android SDK ─────────────────────────────────────────────────────────
+      - name: Android SDK kur
+        uses: android-actions/setup-android@v3
+
+      # ── Bağımlılıklar ────────────────────────────────────────────────────────
+      - name: npm bağımlılıklarını yükle
+        working-directory: mobile
+        run: npm ci
+
+      # ── Expo Prebuild (native Android klasörü oluştur) ───────────────────────
+      - name: Expo prebuild (Android)
+        working-directory: mobile
+        run: npx expo prebuild --platform android --clean --no-install
+
+      # ── Gradle önbelleği ─────────────────────────────────────────────────────
+      - name: Gradle önbelleğini ayarla
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ hashFiles('mobile/android/**/*.gradle*', 'mobile/android/gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: gradle-
+
+      # ── APK derle ────────────────────────────────────────────────────────────
+      - name: Debug APK derle
+        working-directory: mobile/android
+        run: ./gradlew assembleDebug --no-daemon
+
+      # ── APK'yı yükle (artifact olarak) ───────────────────────────────────────
+      - name: APK'yı yükle
+        uses: actions/upload-artifact@v4
+        with:
+          name: mihrab-debug-${{ github.run_number }}
+          path: mobile/android/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 14

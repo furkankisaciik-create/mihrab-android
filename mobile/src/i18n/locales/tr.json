@@ -1,0 +1,496 @@
+{
+  "common": {
+    "prayers": {
+      "imsak": "İmsak",
+      "gunes": "Güneş",
+      "ogle": "Öğle",
+      "ikindi": "İkindi",
+      "aksam": "Akşam",
+      "yatsi": "Yatsı",
+      "sabah": "Sabah",
+      "oglen": "Öğlen",
+      "sabah_kisa": "Sabah",
+      "oglen_kisa": "Öğlen"
+    },
+    "retry": "Tekrar dene",
+    "openSettings": "Ayarları aç",
+    "loading": "Yükleniyor",
+    "error": "Hata",
+    "cancel": "Vazgeç",
+    "close": "Kapat",
+    "save": "Kaydet",
+    "next": "SIRADA",
+    "today": "Bugün",
+    "diyanet": "Diyanet",
+    "savedDiyanet": "Kayıtlı Diyanet",
+    "dataNotice": "Veriler yalnızca bu cihazda saklanır. Hesap veya internet bağlantısı gerekmez.",
+    "localDataNotice": "Kayıtlar yalnızca bu cihazda saklanır. Hesap veya internet bağlantısı gerekmez."
+  },
+  "home": {
+    "eyebrow": "DİYANET NAMAZ VAKİTLERİ",
+    "locating": "Konum belirleniyor",
+    "nextPrayer": {
+      "label": "Sıradaki vakit",
+      "waiting": "Vakit bilgisi bekleniyor"
+    },
+    "loading": "Konum ve vakitler alınıyor",
+    "todayTimes": "Bugünün vakitleri",
+    "turkeyAutoLocation": "Türkiye için otomatik konum",
+    "diyanetSource": "Diyanet kaynağı",
+    "error": {
+      "title": "Vakitler alınamadı",
+      "retry": "Tekrar dene",
+      "manual": "Elle seç"
+    },
+    "actions": {
+      "refreshLocation": "Konumu yenile",
+      "refreshLocationSub": "Telefon konumundan il ve ilçeyi belirle",
+      "selectCity": "İl veya ilçe seç",
+      "selectCitySub": "Türkiye'deki Diyanet bölgelerini listele",
+      "qibla": "Kıble pusulası",
+      "qiblaSub": "Cihaz sensörleriyle Kâbe yönünü canlı bul",
+      "notifications": "Vakit bildirimleri",
+      "notificationsSub": "Her vakit için ayrı hatırlatma ve ses ayarı",
+      "mosques": "Yakındaki camiler",
+      "mosquesSub": "Haritada camileri, mesafeyi ve yol tarifini gör",
+      "silentMode": "Otomatik sessiz mod",
+      "silentModeSub": "Namaz vakitlerine göre sessiz zamanlarını planla",
+      "widget": "Ana ekran widget'ı",
+      "widgetSub": "Sıradaki vakti telefon ana ekranında göster",
+      "roadmap": "Yol haritası",
+      "roadmapSub": "MIHRAB hedeflerinde nerede olduğumuzu gör"
+    },
+    "notice": {
+      "cached": "Kayıtlı Diyanet",
+      "live": "Diyanet"
+    },
+    "dataNotice": "Vakitler Diyanet İşleri Başkanlığının resmî namaz vakitleri sayfasından alınır. Son başarılı veri çevrimdışı kullanım için bu cihazda saklanır."
+  },
+  "notifications": {
+    "eyebrow": "MIHRAB HATIRLATMALARI",
+    "title": "Vakit bildirimleri",
+    "subtitle": "Her vakti, hatırlatma zamanlarını ve ses davranışını ayrı ayrı ayarlayın.",
+    "master": {
+      "title": "Bildirimleri kullan",
+      "granted": "Telefon bildirim izni açık",
+      "denied": "Bildirim izni telefon ayarlarından kapalı",
+      "unsupported": "Bildirimler Android ve iOS cihazlarda çalışır",
+      "pending": "Bildirim izni henüz istenmedi"
+    },
+    "schedule": {
+      "count": "bildirim sırada",
+      "waiting": "Yeni Diyanet vakitleri bekleniyor",
+      "until": "{{time}} tarihine kadar planlandı"
+    },
+    "openSettings": "Telefon ayarlarını aç",
+    "info": {
+      "title": "Başlangıç ayarı",
+      "text": "Dört hatırlatma da seçili, tümü sessizdir. Bir vakti sesli yapmak veya istemediğiniz hatırlatmaları kaldırmak için aşağıdaki seçenekleri kullanın."
+    },
+    "section": {
+      "title": "Vakitler",
+      "hint": "Her biri bağımsız"
+    },
+    "prayer": {
+      "on": "Hatırlatmalar açık",
+      "off": "Bu vakit kapalı",
+      "format": "Bildirim biçimi",
+      "silent": "Sessiz",
+      "sound": "Sesli",
+      "reminderTimes": "Hatırlatma zamanları",
+      "emptyReminder": "En az bir hatırlatma zamanı seçin."
+    },
+    "reminder": {
+      "1h": "1 saat önce",
+      "now": "Vakit şimdi",
+      "minutes": "{{min}} dk önce"
+    },
+    "footer": "MIHRAB sıradaki en fazla 60 yerel bildirimi planlar. Diyanet vakitleri veya konum yenilendiğinde eski plan silinir ve güncel saatlerle yeniden kurulur."
+  },
+  "qibla": {
+    "eyebrow": "CANLI KIBLE PUSULASI",
+    "title": "Kâbe yönü",
+    "subtitle": "Telefonu yere paralel ve düz tutun",
+    "loading": "Konum ve pusula hazırlanıyor",
+    "labels": {
+      "bearing": "Kıble azimutu",
+      "direction": "Pusula yönü",
+      "distance": "Kâbe mesafesi"
+    },
+    "accuracy": {
+      "section": "Doğruluk durumu",
+      "live": "CANLI",
+      "compass": "Pusula doğruluğu",
+      "phoneMeasures": "Telefonda ölçülür",
+      "high": "Yüksek",
+      "medium": "Orta",
+      "low": "Düşük",
+      "calibrate": "Kalibre edilmeli"
+    },
+    "details": {
+      "northRef": "Kuzey referansı",
+      "trueNorth": "Gerçek kuzey",
+      "magneticNorth": "Manyetik kuzey",
+      "locationAccuracy": "Konum doğruluğu",
+      "approxMeters": "yaklaşık ±{{m}} m",
+      "calculation": "Hesaplama",
+      "greatCircle": "Büyük çember azimutu",
+      "onPhone": "Telefonda belirlenir"
+    },
+    "guidance": {
+      "aligned": "Kıble hizasındasınız",
+      "calibratePhone": "Telefonu havada sekiz çizerek kalibre edin",
+      "webPreview": "Canlı pusula Android veya iOS cihazda çalışır",
+      "preparing": "Kıble yönü hazırlanıyor",
+      "turnRight": "Sağa {{amount}}° dönün",
+      "turnLeft": "Sola {{amount}}° dönün"
+    },
+    "calibration": {
+      "title": "Pusulayı kalibre edin",
+      "text": "Telefonu metal eşyalardan uzaklaştırın ve havada birkaç kez sekiz çizin."
+    },
+    "tip": {
+      "title": "En doğru sonuç için",
+      "text": "Manyetik kapak, araç içi, hoparlör, metal masa ve elektronik cihazlar pusulayı etkileyebilir. Açık bir alanda telefonu yatay tutarak ölçüm yapın."
+    },
+    "refresh": "Konumu ve pusulayı yenile",
+    "error": {
+      "title": "Pusula başlatılamadı",
+      "retry": "Tekrar dene",
+      "openSettings": "Ayarları aç"
+    }
+  },
+  "tracker": {
+    "eyebrow": "MIHRAB · GÜNLÜK İBADET",
+    "title": "Namaz takibi",
+    "loading": "Namaz takibi hazırlanıyor",
+    "qadaShortcut": "Kaza namazı takibine geç",
+    "allCompleted": "Bugünün namazları tamamlandı",
+    "remaining": "{{count}} namaz kaldı",
+    "trackHint": "Her namazdan sonra işaretleyerek günlük düzeninizi takip edin.",
+    "completedDay": {
+      "title": "Elhamdülillah, bugün tamamlandı",
+      "text": "Beş vakit namazın tamamını kaydettiniz."
+    },
+    "section": {
+      "eyebrow": "BUGÜN",
+      "title": "Beş vakit namaz",
+      "diyanetTimes": "Diyanet vakitleri",
+      "waitingTimes": "Saat bekleniyor"
+    },
+    "prayerStatus": {
+      "completed": "Kılındı",
+      "current": "Vakti geldi",
+      "passed": "Vakti geçti",
+      "upcoming": "Yaklaşan",
+      "unknown": "Vakit bekleniyor"
+    },
+    "stats": {
+      "title": "Son 7 gün",
+      "lastSeven": "Son 7 günde",
+      "outOf35": "35 namazdan",
+      "fullDays": "Tam gün",
+      "thisWeek": "Bu hafta",
+      "streak": "Günlük seri",
+      "fullDayStreak": "Tam gün"
+    },
+    "info": {
+      "title": "Nasıl kullanılır?",
+      "text": "Kıldığınız namazın satırına dokunun. Yanlış işaretlerseniz tekrar dokunarak geri alabilirsiniz. Bu bölüm günlük eda takibidir; kaza namazları için üstteki ayrı takip ekranını kullanabilirsiniz."
+    },
+    "dataNotice": "Namaz kayıtları yalnızca bu cihazda saklanır. Hesap veya internet bağlantısı gerekmez."
+  },
+  "qada": {
+    "eyebrow": "MIHRAB · KAZA TAKIBI",
+    "title": "Kaza namazı",
+    "loading": "Kaza takibi hazırlanıyor",
+    "trackerShortcut": "Günlük namaz takibine geç",
+    "section": {
+      "title": "Kaza borcu"
+    },
+    "info": {
+      "title": "Kaza takibi nasıl çalışır?",
+      "text": "Kaçırdığınız her vakit için borç girebilirsiniz. Kıldıkça azaltın. Borç negatife düşmez."
+    },
+    "add": "Borç ekle",
+    "subtract": "Kıldım",
+    "noDebt": "Kaza borcunuz bulunmuyor",
+    "dataNotice": "Kaza kayıtları yalnızca bu cihazda saklanır."
+  },
+  "dhikr": {
+    "eyebrow": "MIHRAB · İBADET ARAÇLARI",
+    "title": "Zikir sayacı",
+    "loading": "Zikir sayacı hazırlanıyor",
+    "selectLabel": "ZİKİR SEÇ",
+    "targetLabel": "HEDEF",
+    "targetHint": "Hedef değişince bu oturum sıfırlanır",
+    "custom": "Özel",
+    "tapAndCount": "DOKUN VE SAY",
+    "targetOf": "Hedef {{target}}",
+    "sessionProgress": "Oturum ilerlemesi",
+    "completed": {
+      "title": "Hedef tamamlandı",
+      "text": "Devam edebilir veya yeni bir tur başlatabilirsiniz."
+    },
+    "undo": "Geri al",
+    "reset": "Sıfırla",
+    "haptics": {
+      "title": "Dokunuş titreşimi",
+      "text": "Her sayımda hafif, hedef tamamlanınca belirgin geri bildirim verir."
+    },
+    "stats": {
+      "title": "İstatistikler",
+      "today": "Bugün",
+      "last7": "Son 7 gün",
+      "activeDays": "Aktif gün",
+      "dailyTotal": "Bugünkü toplam",
+      "completedRounds": "Tamamlanan tur",
+      "breakdown": "Bugünün dağılımı"
+    },
+    "customTarget": {
+      "title": "Özel hedef",
+      "text": "1 ile 9999 arasında bir hedef belirleyin.",
+      "apply": "Hedefi uygula",
+      "cancel": "Vazgeç"
+    },
+    "resetModal": {
+      "title": "Oturum sıfırlansın mı?",
+      "text": "{{name}} sayacı sıfırlanacak. Bugünkü toplamınız korunacak.",
+      "cancel": "Vazgeç",
+      "confirm": "Sıfırla"
+    },
+    "dataNotice": "Sayaç ve istatistikler yalnızca bu cihazda saklanır. Hesap veya internet bağlantısı gerekmez."
+  },
+  "duas": {
+    "eyebrow": "MIHRAB · DUA KÜTÜPHANESİ",
+    "title": "Dualar",
+    "loading": "Dua kütüphanesi hazırlanıyor",
+    "favorites": "Favoriler",
+    "all": "Tüm dualar",
+    "categories": "Kategoriler",
+    "noFavorites": "Henüz favori dua eklenmedi",
+    "noFavoritesHint": "Bir duayı favorilere eklemek için yıldız simgesine dokunun.",
+    "search": "Dua ara...",
+    "addFavorite": "Favorilere ekle",
+    "removeFavorite": "Favorilerden çıkar"
+  },
+  "quran": {
+    "eyebrow": "MIHRAB · KUR'AN-I KERİM",
+    "title": "Kur'an-ı Kerim",
+    "loading": "Kur'an hazırlanıyor",
+    "surah": "Sure",
+    "verse": "Ayet",
+    "juz": "Cüz",
+    "lastRead": "Kaldığım yer",
+    "continue": "Devam et",
+    "startReading": "Okumaya başla",
+    "search": "Sure ara...",
+    "progress": "İlerleme"
+  },
+  "calendar": {
+    "eyebrow": "MIHRAB · TAKVİM",
+    "title": "Hicri takvim",
+    "loading": "Takvim hazırlanıyor",
+    "gregorian": "Miladi",
+    "hijri": "Hicri",
+    "today": "Bugün"
+  },
+  "holyDays": {
+    "eyebrow": "MIHRAB · DİNİ GÜNLER",
+    "title": "Dini günler ve geceler",
+    "loading": "Dini günler hazırlanıyor",
+    "upcoming": "Yaklaşan",
+    "past": "Geçmiş",
+    "noUpcoming": "Yaklaşan dini gün bulunmuyor"
+  },
+  "ramadan": {
+    "eyebrow": "MIHRAB · RAMAZAN",
+    "title": "Ramazan imsakiyesi",
+    "loading": "İmsakiye hazırlanıyor",
+    "imsak": "İmsak",
+    "iftar": "İftar",
+    "todayImsak": "Bugünkü imsak",
+    "todayIftar": "Bugünkü iftar",
+    "daysRemaining": "{{count}} gün kaldı",
+    "ramadanEnded": "Ramazan sona erdi",
+    "ramadanNotStarted": "Ramazan henüz başlamadı"
+  },
+  "mosques": {
+    "eyebrow": "MIHRAB · CAMİLER",
+    "title": "Yakındaki camiler",
+    "loading": "Camiler yükleniyor",
+    "distance": "{{distance}} km",
+    "getDirections": "Yol tarifi al",
+    "noMosques": "Yakında cami bulunamadı",
+    "locationRequired": "Konum izni gerekiyor",
+    "refresh": "Yenile",
+    "map": "Harita",
+    "list": "Liste"
+  },
+  "silentMode": {
+    "eyebrow": "MIHRAB · OTOMATİK SESSİZ",
+    "title": "Otomatik sessiz mod",
+    "loading": "Sessiz mod hazırlanıyor",
+    "enable": "Sessiz modu etkinleştir",
+    "enabled": "Etkin",
+    "disabled": "Kapalı",
+    "schedule": "Zamanlama",
+    "prayerWindows": "Namaz vakitleri",
+    "info": {
+      "title": "Nasıl çalışır?",
+      "text": "Namaz vakitleri yaklaşınca telefon otomatik olarak sessiz moda alınır ve vakit geçince geri gelir."
+    }
+  },
+  "homeWidget": {
+    "eyebrow": "MIHRAB · ANA EKRAN",
+    "title": "Ana ekran widget'ı",
+    "loading": "Widget hazırlanıyor",
+    "setup": "Widget'ı kur",
+    "nextPrayer": "Sıradaki vakit",
+    "info": {
+      "title": "Nasıl eklenir?",
+      "text": "Ana ekranda boş bir alana uzun basın, Widget'lar seçeneğine dokunun ve MIHRAB'ı arayın."
+    }
+  },
+  "verse": {
+    "eyebrow": "MIHRAB · GÜNLÜK AYET",
+    "title": "Günlük ayet",
+    "loading": "Ayet yükleniyor",
+    "surah": "Sure",
+    "verse": "Ayet",
+    "arabic": "Arapça metin",
+    "meaning": "Türkçe meal",
+    "share": "Paylaş"
+  },
+  "hadith": {
+    "eyebrow": "MIHRAB · GÜNLÜK HADİS",
+    "title": "Günlük hadis",
+    "loading": "Hadis yükleniyor",
+    "source": "Kaynak",
+    "arabic": "Arapça metin",
+    "meaning": "Türkçe anlam",
+    "share": "Paylaş"
+  },
+  "language": {
+    "eyebrow": "MIHRAB AYARLARI",
+    "title": "Uygulama dili",
+    "subtitle": "Tercih ettiğiniz dili seçin. Seçim anında uygulanır.",
+    "languages": {
+      "tr": "Türkçe",
+      "en": "İngilizce",
+      "ar": "العربية"
+    },
+    "selected": "Seçili",
+    "note": "Dil değişikliği uygulamayı yeniden başlatmayı gerektirebilir."
+  },
+  "premium": {
+    "badge": "MIHRAB PRİMİUM",
+    "heroTitle": "Daha derin bir ibadet deneyimi",
+    "heroSubtitle": "Yapay zeka, aile takibi ve gelişmiş özelliklerle namaz rutininizi güçlendirin.",
+    "featuresTitle": "PRİMİUM ÖZELLIKLERI",
+    "features": {
+      "ai_unlimited": {
+        "title": "Sınırsız MIHRAB AI",
+        "desc": "İslami sorularınızı sınırsız sorun, kişiselleştirilmiş rehberlik alın."
+      },
+      "advanced_stats": {
+        "title": "Gelişmiş istatistikler",
+        "desc": "Haftalık, aylık ve yıllık namaz ve zikir analizleri."
+      },
+      "family": {
+        "title": "Aile / Cemaat sistemi",
+        "desc": "Yakınlarınızla birlikte namaz takibi yapın, birbirinizi teşvik edin."
+      },
+      "cloud_sync": {
+        "title": "Veri yedekleme ve senkronizasyon",
+        "desc": "Tüm verilerinizi güvenli bulutta saklayın, cihazlar arası aktarın."
+      },
+      "themes": {
+        "title": "Özel temalar",
+        "desc": "Koyu mod, açık mod ve özel renk paletleriyle uygulamayı kişiselleştirin."
+      },
+      "custom_adhan": {
+        "title": "Özel ezan sesi",
+        "desc": "Favori müezzin sesini seçin, her vakit için ayrı ayarlayın."
+      }
+    },
+    "choosePlan": "PLAN SEÇ",
+    "monthly": "Aylık",
+    "yearly": "Yıllık",
+    "perMonth": "/ ay",
+    "perYear": "/ yıl",
+    "subscribe": "Şimdi abone ol",
+    "restore": "Satın almaları geri yükle",
+    "legal": "Abonelik otomatik yenilenir. Google Play veya App Store hesabınızdan iptal edebilirsiniz. Ücret, yenileme tarihinden 24 saat önce tahsil edilir.",
+    "activeTitle": "MIHRAB Primium aktif",
+    "activeDesc": "Tüm premium özelliklerine erişiyorsunuz. Keyifli ibadetler dileriz.",
+    "back": "Ana sayfaya dön",
+    "successTitle": "Hoş geldiniz!",
+    "successDesc": "MIHRAB Primium üyeliğiniz aktif. Tüm premium özellikler kullanıma açıldı.",
+    "successBtn": "Harika, başlayalım"
+  },
+  "stats": {
+    "title": "Gelişmiş İstatistikler",
+    "currentStreak": "Mevcut seri",
+    "bestStreak": "En iyi seri",
+    "thisMonth": "Bu ay",
+    "totalPrayers": "Toplam namaz",
+    "days": "gün",
+    "last7days": "SON 7 GÜN",
+    "last30days": "SON 30 GÜN",
+    "perPrayer": "NAMAZ BAZINDA",
+    "last30note": "Son 30 günlük veriye göre"
+  },
+  "family": {
+    "title": "Aile Grubu",
+    "admin": "YÖNETİCİ",
+    "todayCount": "Bugün {{count}}/5 namaz",
+    "weeklyCount": "Bu hafta {{count}}",
+    "todayProgress": "Bugünkü aile namazı",
+    "memberCount": "{{count}} üye",
+    "members": "AİLE ÜYELERİ",
+    "setupTitle": "Aile grubunu oluştur",
+    "setupSubtitle": "Aile üyelerinin namaz takibini birlikte yapabilirsiniz.",
+    "familyName": "Aile adı",
+    "familyNamePlaceholder": "Örn: Yılmaz Ailesi",
+    "yourName": "Senin adın",
+    "yourNamePlaceholder": "Adını gir",
+    "create": "Grubu oluştur",
+    "addMemberTitle": "Üye ekle",
+    "memberName": "Üye adı",
+    "memberNamePlaceholder": "Adı gir",
+    "addMember": "Ekle",
+    "removeTitle": "Üyeyi kaldır",
+    "removeConfirm": "Bu üyeyi gruptan kaldırmak istediğinden emin misin?",
+    "remove": "Kaldır",
+    "tipLabel": "BİLGİ",
+    "tipText": "Her üyenin namazlarına dokunarak işaretleyebilirsin. Veriler bu cihazda saklanır."
+  },
+  "ai": {
+    "eyebrow": "MIHRAB YAPAY ZEKA",
+    "title": "MIHRAB AI",
+    "greeting": "Merhaba! Ben MIHRAB AI. Namaz vakitleri, ibadet rehberi ve dini sorularınız için buradayım. Size nasıl yardımcı olabilirim?",
+    "suggestedQuestions": "ÖNERİLEN SORULAR",
+    "placeholder": "Bir soru sorun...",
+    "disclaimer": "MIHRAB AI islami bilgi verir; kişisel fetva için yetkili bir alime danışın."
+  },
+  "explore": {
+    "eyebrow": "MIHRAB NİHAİ PLANI",
+    "title": "Yayın öncesi yol haritası",
+    "subtitle": "Genel yayın için listedeki bütün hedefler ve test kriterleri tamamlanacak.",
+    "progress": {
+      "title": "Toplam ilerleme",
+      "detail": "17 / 32 ana hedef",
+      "value": "%53",
+      "next": "Sıradaki hedef: Çok dilli destek (TR / EN / AR)"
+    },
+    "completed": "Tamamlananlar",
+    "upcoming": "Yayın öncesi hedefler",
+    "criteria": "Yayına çıkış kriteri",
+    "strategy": {
+      "label": "YAYIN SONRASI",
+      "title": "Yeni temel özellik eklenmeyecek",
+      "text": "Odak; mevcut sistemleri geliştirmek, performansı artırmak, yeni içerikler eklemek ve kullanıcı deneyimini iyileştirmek olacak."
+    }
+  }
+}
