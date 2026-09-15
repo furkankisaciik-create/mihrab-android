@@ -40,4 +40,4 @@ app-example
 
 # generated native folders
 /ios
-/android
+# /android — committed to git for reliable CI builds
