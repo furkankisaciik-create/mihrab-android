@@ -11,11 +11,9 @@ jobs:
     timeout-minutes: 45
 
     steps:
-      # ── Kaynak kod ──────────────────────────────────────────────────────────
       - name: Kodu indir
         uses: actions/checkout@v4
 
-      # ── Node.js ─────────────────────────────────────────────────────────────
       - name: Node.js 22 kur
         uses: actions/setup-node@v4
         with:
@@ -23,28 +21,20 @@ jobs:
           cache: 'npm'
           cache-dependency-path: mobile/package-lock.json
 
-      # ── Java 17 (Gradle için) ────────────────────────────────────────────────
       - name: Java 17 kur
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      # ── Android SDK ─────────────────────────────────────────────────────────
-      - name: Android SDK kur
-        uses: android-actions/setup-android@v3
+      - name: Android SDK lisanslarini kabul et
+        run: yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses 2>/dev/null || true
 
-      # ── Android SDK lisanslarını kabul et ────────────────────────────────────
-      - name: Android SDK lisanslarını kabul et
-        run: yes | sdkmanager --licenses || true
-
-      # ── Bağımlılıklar ────────────────────────────────────────────────────────
-      - name: npm bağımlılıklarını yükle
+      - name: npm bagimliliklarini yukle
         working-directory: mobile
         run: npm ci
 
-      # ── Gradle önbelleği ─────────────────────────────────────────────────────
-      - name: Gradle önbelleğini ayarla
+      - name: Gradle onbellegini ayarla
         uses: actions/cache@v4
         with:
           path: |
@@ -53,15 +43,13 @@ jobs:
           key: gradle-${{ hashFiles('mobile/android/**/*.gradle*', 'mobile/android/gradle/wrapper/gradle-wrapper.properties') }}
           restore-keys: gradle-
 
-      # ── APK derle ────────────────────────────────────────────────────────────
       - name: Debug APK derle
         working-directory: mobile/android
-        run: ./gradlew assembleDebug --no-daemon --info
+        run: ./gradlew assembleDebug --no-daemon
         env:
           GRADLE_OPTS: "-Xmx4096m -XX:MaxMetaspaceSize=512m"
 
-      # ── APK'yı yükle (artifact olarak) ───────────────────────────────────────
-      - name: APK'yı yükle
+      - name: APK'yi yukle
         uses: actions/upload-artifact@v4
         with:
           name: mihrab-debug-${{ github.run_number }}
