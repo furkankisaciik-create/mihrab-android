@@ -8,4 +8,8 @@ version = '0.1.0'
 
 android {
   namespace "expo.modules.mihrabwidget"
+
+  defaultConfig {
+    versionName "0.1.0"
+  }
 }
